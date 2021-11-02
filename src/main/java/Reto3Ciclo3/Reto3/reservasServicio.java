@@ -1,5 +1,11 @@
 package Reto3Ciclo3.Reto3;
 
+import Reportes.ContadorCliente;
+import Reportes.StatusReservas;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -66,5 +72,33 @@ public class reservasServicio {
         return eBoolean;
     }
     
+    public StatusReservas reporteStatusServicio (){
+        List<reservas>completed= metodosCrud.ReservacionStatusRepositorio("completed");
+        List<reservas>cancelled= metodosCrud.ReservacionStatusRepositorio("cancelled");
+        
+        return new StatusReservas(completed.size(), cancelled.size() );
+    }
+    
+    public List<reservas> reporteTiempoServicio (String datoA, String datoB){
+        SimpleDateFormat parser = new SimpleDateFormat ("yyyy-MM-dd");
+        
+        Date datoUno = new Date();
+        Date datoDos = new Date();
+        
+        try{
+             datoUno = parser.parse(datoA);
+             datoDos = parser.parse(datoB);
+        }catch(ParseException evt){
+            evt.printStackTrace();
+        }if(datoUno.before(datoDos)){
+            return metodosCrud.ReservacionTiempoRepositorio(datoUno, datoDos);
+        }else{
+            return new ArrayList<>();
+        
+        } 
+    } 
+     public List<ContadorCliente> reporteClientesServicio(){
+            return metodosCrud.getClientesRepositorio();
+        } 
     
 }

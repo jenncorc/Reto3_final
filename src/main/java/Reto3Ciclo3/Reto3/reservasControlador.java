@@ -1,5 +1,7 @@
     package Reto3Ciclo3.Reto3;
 
+import Reportes.ContadorCliente;
+import Reportes.StatusReservas;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,5 +52,19 @@ public class reservasControlador {
     public boolean delete(@PathVariable("id") int reservasId){
         return servicio.deleteReservas(reservasId);
     }
+    @GetMapping("/report-status")
+    public StatusReservas getReservacion(){
+        return servicio.reporteStatusServicio();
+    }
+    
+    @GetMapping("/report-dates/{dateOne}/{dateTwo}")
+     public List<reservas> getReservasTiempo (@PathVariable("dateOne")String dateOne, @PathVariable("dateTwo")String dateTwo ){
+         return servicio.reporteTiempoServicio(dateOne, dateTwo);
+     }
+     
+     @GetMapping("/report-clients")
+     public List<ContadorCliente> getClientes(){
+         return servicio.reporteClientesServicio();
+     }
     
 }

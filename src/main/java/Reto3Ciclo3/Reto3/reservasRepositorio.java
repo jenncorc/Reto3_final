@@ -1,5 +1,8 @@
 package Reto3Ciclo3.Reto3;
 
+import Reportes.ContadorCliente;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,5 +32,23 @@ public class reservasRepositorio {
     public void delete(reservas reservas) {
         crud4.delete(reservas);
     }
+    
+    public List<reservas> ReservacionStatusRepositorio (String status){
+         return crud4.findAllByStatus(status);
+     }
+     
+     public List<reservas> ReservacionTiempoRepositorio (Date a, Date b){
+         return crud4.findAllByStartDateAfterAndStartDateBefore(a, b);
+     
+     }
+     
+     public List<ContadorCliente> getClientesRepositorio(){
+         List<ContadorCliente> res = new ArrayList<>();
+         List<Object[]> report = crud4.countTotalReservationsByClient();
+         for(int i=0; i<report.size(); i++){
+             res.add(new ContadorCliente((Long)report.get(i)[1],(cliente) report.get(i)[0]));
+         }
+         return res;
+     }
     
 }
