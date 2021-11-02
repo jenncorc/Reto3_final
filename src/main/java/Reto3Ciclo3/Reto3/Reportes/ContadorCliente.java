@@ -1,4 +1,4 @@
-package Reportes;
+package Reto3Ciclo3.Reto3.Reportes;
 
 import Reto3Ciclo3.Reto3.cliente;
 

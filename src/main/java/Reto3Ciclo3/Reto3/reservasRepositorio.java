@@ -1,6 +1,6 @@
 package Reto3Ciclo3.Reto3;
 
-import Reportes.ContadorCliente;
+import Reto3Ciclo3.Reto3.Reportes.ContadorCliente;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;

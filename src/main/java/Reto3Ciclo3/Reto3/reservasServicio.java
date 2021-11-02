@@ -1,7 +1,7 @@
 package Reto3Ciclo3.Reto3;
 
-import Reportes.ContadorCliente;
-import Reportes.StatusReservas;
+import Reto3Ciclo3.Reto3.Reportes.ContadorCliente;
+import Reto3Ciclo3.Reto3.Reportes.StatusReservas;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
