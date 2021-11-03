@@ -1,4 +1,4 @@
-package Reto3Ciclo3.Reto3.web;
+package Reto3Ciclo3.Reto3.Controlador;
 
 import java.util.Collections;
 import java.util.HashMap;
