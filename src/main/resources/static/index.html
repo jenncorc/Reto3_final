@@ -11,7 +11,7 @@
         <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
         
-        <link rel="stylesheet" type="text/css" href="/style/misestilos.css"/>
+        <link rel="stylesheet" type="text/css" href="/style/miestilo.css"/>
 
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
@@ -35,9 +35,86 @@
                 </div>
             </div>
             
-            
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>Menu</h3>
                 </div>
-            
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card-box bg-green">
+                        <div class="inner">
+                            <h3>Principal</h3>
+                            <p>Pagina "retos" total</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                        </div>
+                        <a href="principal.html" class="card-box-footer">Ver Mas <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card-box bg-green">
+                        <div class="inner">
+                            <h3>Computador</h3>
+                            <p>Registrar un Computador</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-laptop" aria-hidden="true"></i>
+                        </div>
+                        <a href="Computer.html" class="card-box-footer">Ver Mas <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card-box bg-orange">
+                        <div class="inner">
+                            <h3>Categoria</h3>
+                            <p>Registrar una Categoria</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-boxes" aria-hidden="true"></i>
+                        </div>
+                        <a href="Categorias.html" class="card-box-footer">Ver Mas <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card-box bg-red">
+                        <div class="inner">
+                            <h3> Clientes </h3>
+                            <p> Registrar un Cliente</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-users"></i>
+                        </div>
+                        <a href="Clientes.html" class="card-box-footer">Ver Mas <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card-box bg-orange">
+                        <div class="inner">
+                            <h3>Mensaje</h3>
+                            <p>Registrar una Mensaje</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </div>
+                        <a href="Mensajes.html" class="card-box-footer">Ver Mas <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card-box bg-orange">
+                        <div class="inner">
+                            <h3>Reservas</h3>
+                            <p>Registrar una Reserva</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-tags" aria-hidden="true"></i>
+                        </div>
+                        <a href="Reservaciones.html" class="card-box-footer">Ver Mas <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+
+
+            </div>
             <br/><br/><br/>
             <hr/>
             
@@ -45,7 +122,7 @@
             <div>
                 <button onClick="logout()" class="btn btn-secondary">Logout</button>
             </div>
-        
+        </div>
     </body>
     <script type="text/javascript">
         $.get("/user", function (data) {

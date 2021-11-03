@@ -1,6 +1,6 @@
 package Reto3Ciclo3.Reto3.Reportes;
 
-import Reto3Ciclo3.Reto3.cliente;
+import Reto3Ciclo3.Reto3.Modelo.cliente;
 
 /**
  *
